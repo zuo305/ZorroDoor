@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 import { routing }  from './app.routing';
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { FilmSearchResultComponent } from './film-search-result/film-search-result.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomePageComponent
+    HomePageComponent,
+    FilmSearchResultComponent
   ],
   imports: [
     routing,

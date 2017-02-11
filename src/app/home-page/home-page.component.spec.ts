@@ -25,4 +25,14 @@ describe('HomePageComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+
+  it('should render title in a h2 tag', async(() => {
+    let fixture = TestBed.createComponent(HomePageComponent);
+    fixture.detectChanges();
+    let compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('h2').textContent).toContain('ZorroDoor');
+  }));
+
+
 });

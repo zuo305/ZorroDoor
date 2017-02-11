@@ -4,9 +4,9 @@
             <h2>ZorroDoor <i>Search</i></h2>
             <i>   ---the best reviews in the world （snowy)</i>
         </div>
-        <input type="text" name="search" placeholder="Search..">
+        <input [(ngModel)]="searchText" type="text" name="search" placeholder="Search..">
         <br/>
         <br/>
-        <button  style="display:block;margin: 0 auto;" type="button" class="btn btn-success center-block"><i>Let's go</i></button>
+        <button  (click)='searchButton()' style="display:block;margin: 0 auto;" type="button" class="btn btn-success center-block"><i>Let's go</i></button>
     </div>
 </div>

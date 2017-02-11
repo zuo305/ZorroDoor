@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpComServiceService} from './../http-com-service/http-com-service.service'
+
 
 @Component({
   selector: 'app-home-page',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor() { }
+  private searchText  : string;
+
+  constructor(private httpComServiceService : HttpComServiceService) { }
 
   ngOnInit() {
+  }
+
+  searchButton()
+  {
+  	this.httpComServiceService.navigateToSearchFilm(this.searchText);
   }
 
 }

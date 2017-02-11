@@ -1,0 +1,36 @@
+<div class="container">
+    <h2>Search{{searchText}}</h2>
+    <p *ngIf="result">Get results ({{result.total}}) :</p>
+    <div class="row">
+        <div class="col-sm-6"></div>
+        <table class="table" *ngIf="resultdouban">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>fileName</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let film of resultdouban.article">
+                    <td>{{film}}</td>
+                    <td>{{film}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="col-sm-6"></div>
+        <table class="table" *ngIf="resultimdb">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>fileName</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let film of resultimdb.article">
+                    <td>{{film}}</td>
+                    <td>{{film}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
