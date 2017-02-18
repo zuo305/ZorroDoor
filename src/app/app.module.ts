@@ -6,12 +6,17 @@ import { routing }  from './app.routing';
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { FilmSearchResultComponent } from './film-search-result/film-search-result.component';
+import { ReviewPageComponent } from './review-page/review-page.component';
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
-    FilmSearchResultComponent
+    FilmSearchResultComponent,
+    ReviewPageComponent
   ],
   imports: [
     routing,

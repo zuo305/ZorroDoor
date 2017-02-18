@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-5">
+            <h2 style="text-align: right">Love it</h2>
+            <table class="table" *ngIf="resultlove">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Auther&Title</th>
+                        <th>review</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let review of resultlove.article">
+                        <td><img src="{{review.imageUrl}}"></td>
+                        <td>{{review.author}}
+                            <br/>{{review.title}}</td>
+                        <td>
+                            <div [innerHTML]="review.content">
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-sm-2" style="text-align: center">
+            <h3></h3>
+            <p>VS</p>
+            <p></p>
+        </div>
+        <div class="col-sm-5">
+            <h2>Hate it</h2>
+            <table class="table" *ngIf="resulthate">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Auther&Title</th>
+                        <th>review</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let review of resulthate.article">
+                        <td><img src="{{review.imageUrl}}"></td>
+                        <td>{{review.author}}
+                            <br/></td>
+                        <td>
+                            <div [innerHTML]="review.content">
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

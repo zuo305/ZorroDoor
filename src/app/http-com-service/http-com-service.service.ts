@@ -38,6 +38,8 @@ export class HttpComServiceService {
               .catch(this.handleError);
   }
 
+
+
   private extractData(res: Response) {
     let body = res.json();
     console.log(body);
@@ -61,6 +63,11 @@ export class HttpComServiceService {
      this.router.navigate(link);
   }
 
+  navigateToReviewPage(movieID : string,type : number)
+  {
+     let link = ['/reviews',movieID,type];
+     this.router.navigate(link);
+  }
 
 }
 

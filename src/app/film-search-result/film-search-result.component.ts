@@ -11,7 +11,7 @@ import { HttpComServiceService} from './../http-com-service/http-com-service.ser
 export class FilmSearchResultComponent implements OnInit {
 
   private searchText : string ;
-  private resultdouban;
+  private resultdouban ;
   private resultimdb;
   constructor(private activatedRoute : ActivatedRoute,
   	private httpComServiceService : HttpComServiceService) { 
@@ -25,24 +25,54 @@ export class FilmSearchResultComponent implements OnInit {
   getHotelList()
   {
 
-   //  let url1 = 'http://localhost:5632/blog/api/douban/' + this.searchText;
-  	// this.httpComServiceService.getFilms(url1)
-  	// .timeout(120000)
-  	// .subscribe(result => {
-  	// 	this.resultdouban = result;
-  	// });
+    let url1 = 'http://localhost:5632/blog/api/douban/' + this.searchText;
+  	this.httpComServiceService.getFilms(url1)
+  	.timeout(120000)
+  	.subscribe(result => {
+  		this.resultdouban = result;
+  	});
 
 
-   //  let url2 = 'http://localhost:5632/blog/api/imdb/' + this.searchText;
-   //  this.httpComServiceService.getFilms(url2)
-   //  .timeout(120000)
-   //  .subscribe(result => {
-   //    this.resultdouban = result;
-   //  });
+    let url2 = 'http://localhost:5632/blog/api/imdb/' + this.searchText;
+    this.httpComServiceService.getFilms(url2)
+    .timeout(120000)
+    .subscribe(result => {
+      this.resultimdb = result;
+    });
 
 
   }
 
+  selectFilm(name : string ,type : number)
+  {
+    var movieID=''; 
+    if(type==1)
+    {
+    let arr = name.split('/title/');
+    if (arr.length>1)
+    {
+      movieID = arr[1];
+      arr = movieID.split('/?')
+      if ( arr.length>0)
+      {
+        movieID=arr[0];
+        console.log(movieID);
+      }
+      this.httpComServiceService.navigateToReviewPage(movieID,type);
+    }
+    }
+    else if(type==0)
+    {
+      let arr = name.split('subject/')
+      if(arr.length>1)
+      {
+        movieID = arr[1];
+        movieID = movieID.slice(0, -1);
+        console.log(movieID);
+      }
+      this.httpComServiceService.navigateToReviewPage(movieID,type);
+    }
+  }
 
   ngOnInit() {
   }
