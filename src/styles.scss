@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'variables'; 
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+
+.fontXS {
+  font-size: 0.75rem;
+}
+
+.fontS {
+  font-size: 0.875rem;
+}
+
+.fontL {
+  font-size: 1.25rem;
+}
+
+.fontM {
+  font-size: 1rem;
+}
+
+.fontL {
+  font-size: 1.25rem;
+}
+
+.fontXL {
+  font-size: 2.25rem;
+}

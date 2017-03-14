@@ -7,7 +7,8 @@ import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { FilmSearchResultComponent } from './film-search-result/film-search-result.component';
 import { ReviewPageComponent } from './review-page/review-page.component';
-
+import { GlobalHeaderComponent } from './global-header/global-header.component';
+import { DropdownModule } from 'ng2-bootstrap/dropdown';
 
 
 
@@ -16,12 +17,14 @@ import { ReviewPageComponent } from './review-page/review-page.component';
     AppComponent,
     HomePageComponent,
     FilmSearchResultComponent,
-    ReviewPageComponent
+    ReviewPageComponent,
+    GlobalHeaderComponent
   ],
   imports: [
     routing,
     BrowserModule,
     FormsModule,
+    DropdownModule.forRoot(),
     HttpModule
   ],
   providers: [],

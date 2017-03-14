@@ -6,16 +6,15 @@
                 <thead>
                     <tr>
                         <th>Image</th>
-                        <th>Auther&Title</th>
                         <th>review</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr *ngFor="let review of resultlove.article">
                         <td><img src="{{review.imageUrl}}"></td>
-                        <td>{{review.author}}
-                            <br/>{{review.title}}</td>
                         <td>
+                            <h5>{{review.title}}</h5>
+                            <div  style="color: gray">{{review.author}}</div>
                             <div [innerHTML]="review.content">
                             </div>
                         </td>
@@ -34,16 +33,15 @@
                 <thead>
                     <tr>
                         <th>Image</th>
-                        <th>Auther&Title</th>
                         <th>review</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr *ngFor="let review of resulthate.article">
                         <td><img src="{{review.imageUrl}}"></td>
-                        <td>{{review.author}}
-                            <br/></td>
                         <td>
+                            <h5>{{review.title}}</h5>
+                        	<div style="color: gray">{{review.author}}</div>
                             <div [innerHTML]="review.content">
                             </div>
                         </td>

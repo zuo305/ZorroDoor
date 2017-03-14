@@ -1,0 +1,47 @@
+/*:host >>> .container-fluid
+{
+	padding-left: 0;
+}
+*/
+:host >>> .navbar
+{
+	margin-bottom: 0;
+	height: 59px;
+	padding:0;
+}
+
+:host >>> .navbar-brand
+{
+	padding:0;
+}
+
+.logoImg {
+	width: 69px;
+	height: 59px;
+}
+
+
+:host >>> .nav-item
+{
+	margin-left: 12px;
+	text-align: center;
+}
+
+.head-button {
+    width: 55px;
+    height: 59px;
+    line-height: 49px;
+
+}
+
+.selected-top-bar{
+    	position: absolute;
+    	width: 55px;
+    	height: 10px;
+    	background-color: red;
+}
+
+
+.head-group-button {
+	margin-left: 15px;
+}
