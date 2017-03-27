@@ -26,7 +26,7 @@ export class FilmSearchResultComponent implements OnInit {
   {
 
     let url1 = 'http://localhost:5632/blog/api/douban/' + this.searchText;
-  	this.httpComServiceService.getFilms(url1)
+  	this.httpComServiceService.searchFilms(url1)
   	.timeout(120000)
   	.subscribe(result => {
   		this.resultdouban = result;
@@ -34,7 +34,7 @@ export class FilmSearchResultComponent implements OnInit {
 
 
     let url2 = 'http://localhost:5632/blog/api/imdb/' + this.searchText;
-    this.httpComServiceService.getFilms(url2)
+    this.httpComServiceService.searchFilms(url2)
     .timeout(120000)
     .subscribe(result => {
       this.resultimdb = result;

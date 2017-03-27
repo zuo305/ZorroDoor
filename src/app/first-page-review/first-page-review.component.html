@@ -1,0 +1,17 @@
+<div class="jumbotron search-bar">
+    <div class="container">
+        <ul class="review-table">
+            <li *ngFor="let movieInfo of this.nowPlayingMoviesList">
+                <div class="img-container" style="text-align: center" >
+                    <img src="{{movieInfo.image}}" class="img-show">
+                    <div >{{movieInfo.title}}</div>
+                </div>
+                <div class="review-container">
+                    item
+                </div>
+                <div style="clear: both;">
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

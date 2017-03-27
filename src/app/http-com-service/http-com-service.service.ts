@@ -1,7 +1,7 @@
 import { Injectable, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Headers, RequestOptions ,Http, Response } from '@angular/http';
-import { DouBanFilmSearcWrap } from './response-douban.model';
+import { DouBanFilmSearcWrap ,NowPlayingMoviesWrap} from './response-douban.model';
 
 
 import 'rxjs/Rx'
@@ -24,7 +24,7 @@ export class HttpComServiceService {
   }
 
 
-  getFilms(url : string) : Observable<DouBanFilmSearcWrap>{
+  searchFilms(url : string) : Observable<DouBanFilmSearcWrap>{
 
   let headers = new Headers({ 'Content-Type': 'application/json' });
   headers.append('Accept','application/json');
@@ -32,6 +32,18 @@ export class HttpComServiceService {
 
 //  let url = 'http://localhost:5632/blog/api/articles/' + searchText;
 //  let url = `${this.baseUrl}/v2/movie/search?q=${searchText}`;
+  console.log(url);
+  return this.http.get(url, options)
+              .map(this.extractData)
+              .catch(this.handleError);
+  }
+
+  getNowPlayingMovies(url : string ) : Observable<NowPlayingMoviesWrap>{
+
+  let headers = new Headers({ 'Content-Type': 'application/json' });
+  headers.append('Accept','application/json');
+  let options = new RequestOptions({ headers: headers });
+
   console.log(url);
   return this.http.get(url, options)
               .map(this.extractData)

@@ -9,6 +9,7 @@ import { FilmSearchResultComponent } from './film-search-result/film-search-resu
 import { ReviewPageComponent } from './review-page/review-page.component';
 import { GlobalHeaderComponent } from './global-header/global-header.component';
 import { DropdownModule } from 'ng2-bootstrap/dropdown';
+import { FirstPageReviewComponent } from './first-page-review/first-page-review.component';
 
 
 
@@ -18,7 +19,8 @@ import { DropdownModule } from 'ng2-bootstrap/dropdown';
     HomePageComponent,
     FilmSearchResultComponent,
     ReviewPageComponent,
-    GlobalHeaderComponent
+    GlobalHeaderComponent,
+    FirstPageReviewComponent
   ],
   imports: [
     routing,

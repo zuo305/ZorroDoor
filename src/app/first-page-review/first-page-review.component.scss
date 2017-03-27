@@ -1,0 +1,29 @@
+$paddingTop: 16px;
+
+.review-table {
+	list-style:none;  	
+	background-color:white;
+}
+
+.review-table li{
+	margin: 0 0 3px 0;
+}
+
+.img-container {
+	float: left;
+	width: 16%;
+	height: 100%;
+	padding-top: $paddingTop;
+}
+
+.img-show{
+	width: 128px;
+	height:190px;
+}
+
+.review-container{
+	float: right;
+	width: 84%;
+	height: 100%;
+	padding-top: $paddingTop;
+}

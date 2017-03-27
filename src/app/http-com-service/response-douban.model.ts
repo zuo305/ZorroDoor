@@ -11,3 +11,15 @@ export class DouBanFilmSearcWrap {
 
 }
 
+export class NowPlayingMovieInfo{
+	id : string;
+	image : string;
+	postUrl : string;
+	title : string;
+		
+}
+
+
+export class NowPlayingMoviesWrap {
+	article : NowPlayingMovieInfo[];
+}
